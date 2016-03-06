@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones en Arrays</title>
+
+	<script type="text/javascript">
+
+		var vocales = ["a", "e", "i", "o", "u"];
+
+		console.log("Nuestro array de vocales tiene "+vocales.length+" posiciones.");
+
+		vocales = vocales.concat("A", "E", "I", "O", "U");
+
+		console.log(vocales);
+
+		console.log(vocales.join(""));
+		console.log(vocales.join(" "));
+		console.log(vocales.join(", "));
+
+		var a = vocales.pop();
+		console.log("El pop de vocales nos recupera: "+a);
+		vocales.push(a);
+		console.log("El push de a en vocales nos genera: "+vocales);
+
+		a = vocales.shift();
+		console.log("El shift de vocales nos recupera: "+a);
+		vocales.unshift(a);
+		console.log("El unshift de vocales nos genera: "+vocales);
+
+		console.log("El reverso de vocales es: "+vocales.reverse());
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplos con DOM</title>
+
+	<script type="text/javascript">
+		function inicio () {
+
+			var nodo = document.getElementById("nodo_primero");
+
+			console.log(nodo);
+			console.log("Nombre nodo: "+nodo.nodeName);
+			console.log("Valor nodo: "+nodo.childNodes[0].nodeValue);
+			console.log("Tipo nodo: "+nodo.nodeType);
+			console.log("Nombre nodo: "+nodo.ownerDocument.nodeName);
+			console.log("Primer hijo: "+nodo.firstChild.nodeName);
+			console.log("Ultimo hijo: "+nodo.lastChild.nodeName);
+			var hijos=nodo.childNodes;
+		
+			console.log("El nodo tiene hijos?  ->"+nodo.hasChildNodes());
+			console.log("El nodo tiene atributos?  ->"+nodo.hasAttributes());
+			console.log("El nodo tiene atributo class?  ->"+nodo.hasAttribute("class"));
+		}
+	</script>
+</head>
+<body onload="inicio()">
+
+	<div id="nodo_primero"> Hola
+		<p id="parrafo1">Parrafo 1</p>
+		<p id="parrafo2">Parrafo 2</p>
+		<p id="parrafo3">Parrafo 3</p>
+		<button id="input_nombre" name="Nombre" text="name">Nombre</button>
+	</div>
+
+</body>
+</html>

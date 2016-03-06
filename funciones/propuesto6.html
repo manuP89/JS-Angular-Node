@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio propuesto 6</title>
+
+	<script type="text/javascript">
+	//codificar un javascript que llame en un alert a una funcion y que compruebe si el texto del alert esta en mayusculas o minusculas
+
+	var cadena = "El perro verde";
+	var cadena2 = "la casa encantada";
+	var cadena3 = "EL MURO DE HORMIGON";
+
+	function evalua (texto) {
+		var res;
+		if (texto.toUpperCase()==texto){
+			res = "El texto \""+texto+"\" está en mayusculas";
+		}else if (texto.toLowerCase()==texto){
+			res = "El texto \""+texto+"\" está en minusculas";
+		}else{
+			res = "El texto \""+texto+"\" tiene mayúsculas y minúsculas por todas partes.";
+		}
+
+		return res;
+	}
+	
+	alert(evalua(cadena));
+
+	alert(evalua(cadena2));
+
+	alert(evalua(cadena3));
+
+	</script>
+</head>
+<body>
+</body>
+</html>

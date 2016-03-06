@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplos con JSON</title>
+
+	<script type="text/javascript">
+
+	var aCoches = [{color:"rojo", puertas:2, pagado:true},
+					{color:"azul", puertas:4, pagado:true},
+					{color:"blanco", puertas:4, pagado:false}];
+
+	console.log(JSON.stringify(aCoches));
+	console.log(aCoches);
+
+	var cadenaJSON = '[{"color":"verde","puertas":2,"pagado":true},{"color":"negro","puertas":4,"pagado":true},{"color":"amarillo","puertas":4,"pagado":false}]';
+
+	console.log(JSON.parse(cadenaJSON));
+	</script>
+</head>
+<body>
+</body>
+</html>

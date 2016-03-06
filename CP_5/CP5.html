@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Caso Practico 5</title>
+	<script type="text/javascript">
+
+	var x = {"cadena":"esto es una cadena","numero":4,"array":[0,1,2],"objeto":{"clave":"valor","clave2":"valor2"}};
+
+	console.log(x);
+	console.log("La posición 1 del array contenido en el objeto JSON es :"+x.array[1]);
+	console.log(x.objeto.clave2);
+
+	var xString = JSON.stringify(x);
+	console.log(xString);
+
+	var xJSON = JSON.parse(xString);
+	console.log(xJSON);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

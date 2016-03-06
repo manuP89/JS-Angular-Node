@@ -1,0 +1,22 @@
+{
+  "libros0": {
+      "id": 0,
+      "titulo": "titulo uno",
+      "autor": "autor uno"
+    },
+    "libros1": {
+      "id": 1,
+      "titulo": "titulo dos",
+      "autor": "autor dos"
+    },
+    "libros2": {
+      "id": 2,
+      "titulo": "titulo tres",
+      "autor": "autor tres"
+    },
+    "libros3": {
+      "id": 3,
+      "titulo": "titulo cuatro",
+      "autor": "autor cuatro"
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Caso Práctico 1</title>
+	<script type="text/javascript">
+		function mostrarParrafos () {
+
+			var lista=document.getElementsByTagName("p");
+				//console.log("Etiqueta p "+listaParrafos);
+			for(var i=0;i<lista.length;i++){
+			//for(i in lista){	
+				window.alert("Etiqueta p "+(i+1)+": "+lista.item(i).innerText);
+			}
+
+			var nuevoP=document.createElement("p");
+			var textoP=document.createTextNode("Texto del nuevo parrafo");
+			cuerpo.appendChild(nuevoP);
+			nuevoP.appendChild(textoP);
+
+		}
+	</script>
+</head>
+<body id="cuerpo">
+	
+	<button onclick="mostrarParrafos()">Alerta</button>
+	
+	<p>Parrafo 1</p>
+	<p>Parrafo 2</p>
+	<p>Parrafo 3</p>
+	
+</body>
+</html>

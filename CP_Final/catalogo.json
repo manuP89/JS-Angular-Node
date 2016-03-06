@@ -1,0 +1,1 @@
+{"producto1":{"id":1,"nombre":"Escoba","precio":1.01,"disponible":true},"producto2":{"id":2,"nombre":"Fregona","precio":1.5,"disponible":true},"producto3":{"id":"3","nombre":"Palo","precio":"3","disponible":true},"producto4":{"id":"4","nombre":"pelota","precio":"4","disponible":false}}

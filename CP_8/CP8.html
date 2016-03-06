@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Caso Práctico 8</title>
+	<script type="text/javascript" src="lib/angular.js"></script>
+	<style type="text/css">
+		ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body ng-app="miApp" ng-controller="miController">
+	<div>
+	<label>Tengo {{amigos.length}} amigos. Ellos son: <input ng-model="searchText" placeholder="Introduzca nombre a buscar"/></label>
+	<ul id="searchTextResults">
+		<li ng-repeat="amigo in amigos | filter:searchText">{{[$index+1]}} {{amigo.nombre | uppercase}} tiene {{amigo.edad}} años.</li>
+	</ul>
+	</div>
+	<script type="text/javascript">
+		var app=angular.module("miApp",[]);
+		app.controller("miController", function ($scope) {
+			$scope.amigos=[{nombre:'John', edad:25},{nombre:'Jessie', edad:30}, {nombre:'Johanna', edad:28}, {nombre:'Joy', edad:15}, {nombre:'Mary', edad:28}, {nombre:'Peter', edad:95}, {nombre:'Sebastian', edad:50}, {nombre:'Erika', edad:27}, {nombre:'Patrick', edad:40}, {nombre:'Samantha', edad:60}];
+		})
+	</script>
+
+</body>
+</html>

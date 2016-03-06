@@ -1,0 +1,19 @@
+pagina con formulario valores de libro, submit post y añades libro
+
+json usar el de objeto de objetos no array (id necesario)
+
+al acceder a raíz es la página de nuevos libros (metodo get -> index.html)
+
+si recibe /listar -> se lee el json y se muestra como respuesta como cadena de texto
+
+si recibe /add llama al localhost con un post (localhost/add) mandando los datos en el cuerpo
+
+crear un objeto json del libro (no el catalogo) para mandar el cuerpo de la req con la info como atributos
+
+tras crear leer de nuevo el fichero con el libro añadido y mostrarlo
+
+parse leer json, stringify escribir json
+
+al recibir una petición desde URL de tipo GET de libro/:id muestre la info del libro
+
+al recibir /delete/:id borrará en el json el libro

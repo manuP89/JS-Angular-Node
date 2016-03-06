@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones en cadenas</title>
+
+	<script type="text/javascript">
+		
+		var cadena = "Esta es la cadena de prueba";
+
+		console.log("Nuestra cadena tiene "+cadena.length+" caracteres.");
+	
+		cadena = cadena.concat(" alternativa.");
+	
+		console.log("Otra manera de concatenar con \"concat\": "+cadena);
+	
+		console.log("Función de mayúsculas: "+cadena.toUpperCase());
+	
+		console.log("Función de minúsculas: "+cadena.toLowerCase());
+	
+		console.log("El caracter que ocupa la posición 11 es: "+cadena.charAt(11));
+	
+		console.log("La primera ocurrencia de la letra \"e\" es: "+cadena.indexOf("e"));
+	
+		console.log("La primera ocurrencia de la palabra \"cadena\" es: "+cadena.toLowerCase().indexOf("cadena"));
+	
+		console.log("La última ocurrencia de la letra \"e\" es: "+cadena.lastIndexOf("e"));
+	
+		console.log("La subcadena desde la posición 11 a la posición 16 es: "+cadena.substring(11, 17));
+
+		var palabras = cadena.split(" ");
+
+		console.log("EL array de palabras es: "+palabras);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

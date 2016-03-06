@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulacion de tabla a partir de DOM</title>
+	<script type="text/javascript">
+		function inicio () {
+			//var tabla=document.getElementById("tabla");
+			//console.log(tabla);
+
+			var nueva_fila=document.createElement("tr");
+			//console.log(nueva_fila);
+
+			for(var i=0;i<3;i++){
+				var nueva_celda=document.createElement("td");
+				var texto_celda=document.createTextNode(i+1)
+				nueva_celda.appendChild(texto_celda);
+				nueva_fila.appendChild(nueva_celda);
+				console.log("Iteración "+i+": ");
+				console.log(nueva_fila);
+			}
+
+//			tabla.appendChild(nueva_fila);
+			var fila=document.getElementById("fila1");
+			var tabla=fila.parentNode
+			tabla.replaceChild(nueva_fila, fila);
+		}
+
+	</script>
+</head>
+<body onload="inicio()">
+
+	<table id="tabla">
+		<tr id="fila1">
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>	
+	</table>
+
+</body>
+</html>

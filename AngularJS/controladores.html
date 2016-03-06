@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Controladores</title>
+	<script type="text/javascript" src="lib/angular.js"></script>
+</head>
+<body ng-app="miApp" ng-controller="miController" ng-init="nombre=''; apellido=''">
+
+	<input type="text" ng-model="nombre" placeholder="Nombre" />
+	<input type="text" ng-model="apellido" placeholder="Apellido" />
+
+	<p>Bienvenido {{nombre_completo()}}</p>
+
+	<script type="text/javascript">
+		var app=angular.module("miApp",[]);
+		app.controller('miController', function ($scope){
+			$scope.nombre_completo=function(){
+				return $scope.nombre+" "+$scope.apellido;
+			}
+		})
+
+	</script>
+
+</body>
+</html>

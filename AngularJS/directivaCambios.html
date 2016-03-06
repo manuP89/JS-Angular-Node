@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Directiva ng-change</title>
+	<script type="text/javascript" src="lib/angular.js"></script>
+</head>
+<body ng-app="miApp" ng-controller="miController">
+
+	<input type="checkbox" ng-model="si" ng-change="favor()"/>A favor
+	<input type="checkbox" ng-model="no" ng-change="contra()"/>En contra
+
+	<p>Total votos: {{total}}</p>
+
+	<script type="text/javascript">
+		
+		function controlador ($scope) {
+			$scope.total = 0;
+			$scope.favor = function () {$scope.total++}
+			$scope.contra = function () {$scope.total--}
+		}
+		var app = angular.module('miApp',[]);
+		//manera alternativa 1
+		//app.controller("miController", function($scope){...});
+
+		//manera alternativa 2
+		//angular.module("miApp",[]).controller("miController",controlador);
+
+		app.controller('miController', controlador)
+		
+
+	</script>
+</body>
+</html>

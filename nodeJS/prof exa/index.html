@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Biblioteca</title>
+  </head>
+  <body>
+    <h1>Bienvenida a la biblioteca</h1>
+    <form action="http://127.0.0.1:3000/add" method="post">
+      id: <input type="text" name="id" value="">
+      titulo: <input type="text" name="titulo" value="">
+      autor: <input type="text" name="autor" value="">
+      <input type="submit" name="enviar" value="Enviar">
+    </form>
+    <p>
+      <form action="http://127.0.0.1:3000/delete" method="post">
+        id: <input type="text" name="id" value="">
+        titulo: <input type="text" name="titulo" value="">
+        autor: <input type="text" name="autor" value="">
+        <input type="submit" name="borrar" value="Borrar">
+      </form>
+    </p>
+      <a href="/listar">Listado de libros</a>
+  </body>
+</html>

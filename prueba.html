@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba con JavaScript</title>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+	//esto es un comentario de linea
+	/* esto ya es un comentario de la polla de lineas
+	mira mira 
+	
+		alert("Script incrustado en el head del html");
+
+		var num1 = 4;
+		var num2 = 5;
+		var resultado = num1 * num2
+
+		alert("El resultado de multiplicar "+num1+" por "+num2+" es "+resultado);
+
+		var array = ["Lunes", 2, [1, 2, 3], false];
+		alert(array[2]);
+
+		array.push("y este me lo saco de la manga");
+		alert(array);
+
+		//ejercicio propuesto 1
+		var mensaje1= "Hola Mundo!\nQue fácil es incluir \"comillas dobles\" \ny \'comillas simples\'";
+
+		mensaje1 = "<javascript>\n\n\n"+mensaje1;
+
+		alert(mensaje1);
+		
+
+		//ejercicio propuesto 2
+		var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+		var primerMes = meses[0];
+		var ultimoMes = meses[11];
+
+		var mensaje2 = "El primer mes del año es "+primerMes+ " y el último es "+ultimoMes;
+
+		alert(mensaje2);
+*/
+		//ejercicio propuesto 3
+		var valores = [true, 5, false, "hola", "adios", 2];
+		var operacion;
+		console.log(valores);
+
+		operacion = valores[3] > valores[4];
+		console.log("Es "+valores[3]+" mayor q "+valores[4]+"?: "+operacion);
+		
+		operacion = valores[4] > valores[3];
+		console.log("Es "+valores[4]+" mayor q "+valores[3]+"?: "+operacion);
+
+		operacion = valores[0]||valores[2];
+		console.log(operacion);
+		
+		operacion = valores[0]&&valores[2];
+		console.log(operacion);
+
+		operacion = valores[1] + valores[5];
+		console.log("La suma de los dos números es "+operacion);
+		
+		operacion = valores[1] - valores[5];
+		console.log("La resta de los dos números es "+operacion);
+		
+		operacion = valores[1] * valores[5];
+		console.log("La multiplicación de los dos números es "+operacion);
+		
+		operacion = valores[1] / valores[5];
+		console.log("La división de los dos números es "+operacion);
+		
+		operacion = valores[1] % valores[5];
+		console.log("El módulo de los dos números es "+operacion);
+
+
+	</script>
+
+</head>
+<body>
+<!-- 
+	<script type="text/javascript">
+		alert("Script incrustado en el body del html");
+	</script>
+
+	<button onclick="alert('Script incrustado en el botón')">Haz click aquí</button>
+-->
+</body>
+</html>

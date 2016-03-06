@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Directiva de angular</title>
+	<script type="text/javascript" src="lib/angular.js"></script>
+</head>
+<body ng-app ng-controller="controlador">
+
+	<label>Nombre: </label>
+	<input type="text" placeholder="Escribe tu nombre" ng-model="nombre"/>
+	<p>{{nombre}}</p>
+
+	<div>
+		<button ng-click="incrementar()" ng-init="count = 0">Enviar</button>
+		<span>{{count}}</span>
+	</div>
+
+	<div ng-init="lista=[1,2,3,4]">
+		<ul>
+			<li ng-repeat="num in lista">Numero: {{num}}</li>
+		</ul>
+	</div>
+
+	<div ng-init="personas =[{nombre:'Fer', edad:12},{nombre:'Victor', edad:13},{nombre:'Eva', edad:14},{nombre:'Susana', edad:15},{nombre:'Alejo', edad:16} ]">
+		<table>
+			<tr ng-repeat="persona in personas">
+				<td>{{persona.nombre}}</td>
+				<td>{{persona.edad}} años</td>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+
+		function controlador ($scope) {
+			$scope.nombre="Pepito";
+			$scope.incrementar=function(){
+				$scope.count =$scope.count + 1;
+			}
+		}
+
+
+	</script>
+</body>
+</html>

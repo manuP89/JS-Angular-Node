@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+	<meta charset="UTF-8"/>
+	<title>Cuestionario con AngularJS</title>
+	<script src="lib/angular.js"></script>
+	<script src="js/scripts.js"></script>
+	<style type="text/css">
+		
+		.status-ok{
+			width: 200px;
+			border: 2px solid green;
+			background-color: #DEFBB5;
+		}
+
+		.status-ko{
+			width: 200px;
+			border: 2px solid red;
+			background-color: #FC9F9F;
+		}
+
+		#nota{
+			font-size: 20px;
+			font-weight: bolder;
+			margin-top: 20px;
+			padding:10px;
+			width: 200px;
+			border: 2px double yellow;
+			background-color: #F8F5C2;
+		}
+
+		#test{
+			width: 450px;
+			border: 5px double black;
+			padding-left: 20px;
+			padding-bottom: 20px;
+		}
+
+		h1{
+			margin-top: 15px;
+			text-decoration: underline;
+		}
+
+		.question p{
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+<body ng-app="miApp" ng-controller="miControlador">
+	<div id="test">
+		<h1>Cuestionario con AngularJS</h1>
+		<div class="questions">
+			<div class="question" ng-repeat="question in questions">
+				<p class="status-{{question.status}}">{{question.text}}</p>
+				<div class="answers" ng-repeat="answer in question.answers">
+					<input type="radio" value="{{answer.id}}" name="question-{{question.id}}" 
+					id="answer-{{question.id}}-{{answer.id}}" ng-model="question.userAnswer" 
+					ng-change="validar(question)"/>
+					<label for="answer-{{question.id}}-{{answer.id}}">{{answer.text}}</label>
+		 		</div>
+			</div>
+		</div>
+		<div id="nota">
+		 	<span>Has acertado {{contador}} de {{questions.length}}</span>
+		</div>
+	</div>
+<!--¿cómo se añadiría un boton de validar que guarde las respuestas y te 
+	diga el resultado y no se pueda cambiar?-->
+
+</body>
+</html>

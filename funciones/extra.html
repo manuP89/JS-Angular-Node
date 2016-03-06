@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio añadido</title>
+
+	<script type="text/javascript">
+	//Dadas dos listas, una de objetos y otra de usos, vamos a mostrar por pantalla la relacion de cada uno de nuestros objetos y su correspondiente uso.
+
+	var bidi = [["plato", "silla", "pelota"],["comer", "sentarse", "jugar"]];
+
+	var objetos = ["plato", "silla", "pelota"];
+	var usos = ["comer", "sentarse", "jugar"];
+
+	function unir (bidi) { 
+
+		for (i=0;i<3;i++){
+			alert(bidi[0][i]+" se usa para "+bidi[1][i]);
+		}
+	}
+
+	function fusion (objetos, usos) {
+
+		for(i=0;i<3;i++){
+			alert(objetos[i]+" se usa para "+usos[i]);
+		}
+	}
+	
+	unir(bidi);
+	fusion(objetos, usos);
+	
+	</script>
+</head>
+<body>
+</body>
+</html>

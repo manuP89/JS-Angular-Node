@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Directiva ng-show ng-hide</title>
+	<script type="text/javascript" src="lib/angular.js"></script>
+</head>
+<body ng-app>
+		<input type="checkbox" ng-model="check1"/>Muestra
+		<input type="checkbox" ng-model="check2"/>Oculta
+
+		<p ng-show="check1">Hola</p>
+		<p ng-hide="check2">Adios</p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cuestionario con AngularJS</title>
+
+
+<!--Cargamos los recursos-->
+<script type="text/javascript" src="libs/angular.js"></script>
+<script type="text/javascript" src="libs/script.js"></script>
+<link type="text/css" rel="stylesheet" href="css/test.css" />
+</head>
+
+
+
+<!--Enlazamos la App y el controlador-->
+<body ng-app="MyApp" ng-controller="controlador">
+	
+	
+	<!--Generamos un div con cada pregunta-->
+	<div ng-repeat="a in questions" >
+		<p>{{a.texto}}</p>
+		
+		
+		<!--Dentro del DIV generamos un FORM con un Imput tipo checkbox para cada respuesta
+		asociamos el status del checkbox al atributo "status" y cada vez que haya un
+		cambio ejecutamos la función validar-->
+		<form>
+		<div ng-repeat="b in a.resp"><input type="checkbox" ng-model="b.status" ng-change="validate(b)" >{{b.respuesta}}</div>
+		</form>
+	</div>
+	</br>
+
+
+
+	<!--Simplemente muestra el valor del contador de respuestas. Se podría hacer más guay
+	y meter CSSs en función de las respuestas pero estoy hasta los...-->
+		<div >
+			<span>Tu puntuación es: {{respCorrect}} puntos</span>
+		</div>
+
+</body>
+</html>

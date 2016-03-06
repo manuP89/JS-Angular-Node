@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Caso Práctico 4</title>
+	<script type="text/javascript">
+		function descarga(){
+			
+			var xmlhttp;
+			
+			if (window.XMLHttpRequest){
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp=new XMLHttpRequest();
+			}
+			else{
+				// code for IE6, IE5
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange=function(){
+				if (xmlhttp.readyState==4 && xmlhttp.status==200){
+					var doc = JSON.parse(xmlhttp.responseText);
+					document.getElementById("titulo").innerHTML=doc.title;
+					document.getElementById("cuerpo").innerHTML=doc.body;
+				}
+
+			}
+			xmlhttp.open("GET","http://jsonplaceholder.typicode.com/posts/1",true);
+			xmlhttp.send();
+
+		}
+	</script>
+</head>
+<body>
+	<div id="myDiv"><h2>Lectura JSON con AJAX</h2>
+<!--	<form>
+	  	
+	  		Titulo: <input type="text" id="titulo" placeholder="titulo">Titulo<br>
+	  		Body: <input type="text" id="cuerpo" placeholder="cuerpo">Cuerpo<br>
+	  		<button type="submit" onclick="descarga()">Enviar</button>
+-->
+			<textarea id="titulo" rows="3" cols="75">Titulo</textarea><br>
+			<textarea id="cuerpo" rows="5" cols="75">Cuerpo</textarea><br>
+			<button type="submit" onclick="descarga()">Enviar</button>
+	</div>
+	<!--	</form>-->
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplos con eventos</title>
+
+	<script type="text/javascript">
+
+		function alerta(texto){
+			console.log(texto);
+		}
+
+		function alerta2(evento){
+			alert(evento.target.id);
+		}
+
+		function resaltado(elemento){
+			elemento.style.color='red';
+		}
+
+		function noResaltado(elemento){
+			elemento.style.color='black';
+		}
+
+		function inicializar(){
+			var boton=document.getElementById('botoncito')
+			boton.addEventListener('click',alerta2, false);
+
+			//internet explorer
+			//boton.attachEvent('onclick',alerta2);
+		}
+
+	</script>
+</head>
+<body onload="inicializar()" 
+	onresize="alerta('Estamos redimensionando el navegador')" 
+	onunload="alerta('Estamos cerrando el navegador')">
+
+	<h1 onclick="alerta('Click en h1')" 
+		ondbclick="alerta('Doble click en h1')">Manejo de eventos</h1>
+
+	<p onmousedown="alerta('Evento OnMouseDown sobre el párrafo')"
+		onmousemove="alerta('Evento OnMouseMove sobre el parrafo')"
+		onmouseout="alerta('Evento OnMouseOut sobre el parrafo')"
+		onmouseover="alerta('Evento OnMouseOver sobre el parrafo')"
+		onmouseup="alerta('Evento OnMouseUp sobre el parrafo')">
+
+		parrafo para probar los eventos relacionados con el ratón
+		Así, clickar con el botón del ratón en ciertos apartados, mover el mismo ratón, o teclear pueden ser eventos que se produzcan dentro de nuestra aplicación y se traduzcan en funciones que se tienen que ejecutar en ciertos momentos en JavaScript.
+
+	</p>
+
+	<form onreset="alerta('Borramos el formulario')" 
+		onsubmit="alerta('Enviamos el formulario')">
+		Nombre
+		<input type="text" name="Nombre" 
+		onblur="alerta('Evento Onblur sobre input Nombre')" 
+		onchange="alerta('Evento Onchange sobre Nombre')" 
+		onfocus="alerta('Evento Onfocus sobre Nombre')"/>
+
+		Apellido
+		<input type="text" name="Apellido" 
+		onkeydown="alerta('Evento KeyDown sobre apellido')" 
+		onkeypress="alerta('Envento KeyPress sobre apellido')" 
+		onkeyup="alerta('Evento KeyUp sobre apellido')"/>
+		<br>
+		
+		<textarea rows="3" cols="15" onselect="alerta('Estoy seleccionando texto')"></textarea>
+
+		Borrar
+		<input type="reset" value="Borrar"/>
+		Entrar
+		<input type="submit" value="Enviar"/>
+
+	</form>
+
+	<ul>
+		<li onmouseover="resaltado(this)" onmouseout="noResaltado(this)">Elemento 1</li>
+		<li onmouseover="resaltado(this)" onmouseout="noResaltado(this)">Elemento 2</li>
+		<li onmouseover="resaltado(this)" onmouseout="noResaltado(this)">Elemento 3</li>
+		<li onmouseover="resaltado(this)" onmouseout="noResaltado(this)">Elemento 4</li>
+	</ul>
+	<button id="botoncito" aux="auxiliar">Botoncito</button>
+</body>
+</html>
